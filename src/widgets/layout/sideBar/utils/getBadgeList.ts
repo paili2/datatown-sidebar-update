@@ -1,11 +1,11 @@
-export type BadgeInfo = { flag: boolean; label: "new" | "pro" };
+export type BadgeInfo = { flag: boolean; label: "참여중" | "pro" };
 
 export function getBadgeList(
-  isNew: boolean,
+  isOngoing: boolean,
   isPro: boolean
 ): BadgeInfo[] {
   return [
-    { flag: isNew, label: "new" },
+    { flag: isOngoing, label: "참여중" },
     { flag: isPro, label: "pro" },
   ];
 }

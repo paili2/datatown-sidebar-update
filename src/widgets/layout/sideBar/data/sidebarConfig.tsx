@@ -1,9 +1,11 @@
 import { SidebarConfigList } from "../types";
+import { managementItems } from "./managementItems";
 import { menuItems } from "./menuItems";
-import { othersItems } from "./othersItems";
+import { projectItems } from "./projectItems";
 
 export const sidebarConfig:SidebarConfigList =
  [
-  { title: "menu", items: menuItems, type: "menu" },
-  { title: "others", items: othersItems, type: "others" },
-];
+  { title: "menu", items: menuItems, type: "General" },
+  { title: "projects",     items: projectItems,    type: "Projects"},
+  { title: "managements",  items: managementItems, type: "Managements" },
+  ];

@@ -9,7 +9,7 @@ export type NavItem = {
   name: string;
   icon: React.ReactNode;
   path?: string;
-  subItems?: { name: string; path: string; pro?: boolean; new?: boolean }[];
+  subItems?: { name: string; path: string; pro?: boolean; ongoing?: boolean }[];
 };
 
 
@@ -27,13 +27,13 @@ export interface MenuDropdownItemProps {
   name: string;
   path: string;
   isActive: (path: string) => boolean;
-  isNew?: boolean;
+  isOngoing?: boolean;
   isPro?: boolean;
 }
 
 export type SectionProps = {title:string}
 
-export type MenuType = "menu" | "others";
+export type MenuType = "menu" | "Managements" | "Projects" | "General";
 
 
 export type SidebarMenuListProps = SidebarMenuBaseProps
@@ -56,12 +56,12 @@ export interface MenuDropdownItemProps {
   name: string;
   path: string;
   isActive: (path: string) => boolean;
-  isNew?: boolean;
+  isOngoing?: boolean;
   isPro?: boolean;
 }
 
 export interface BadgeProps {
-  label: "new" | "pro";
+  label: "참여중" | "pro";
   active: boolean;
 }
 

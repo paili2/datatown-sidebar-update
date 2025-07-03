@@ -5,13 +5,14 @@ import { getBadgeList } from "../utils/getBadgeList";
 import { MenuDropdownItemProps } from "../types";
 
 
-const MenuDropdownItem: React.FC<MenuDropdownItemProps> = ({  name,
+const MenuDropdownItem: React.FC<MenuDropdownItemProps> = ({
+  name,
   path,
   isActive,
-  isNew = false,
+  isOngoing = false,
   isPro = false, }) => {
     const active = isActive(path);
-  const badges = getBadgeList(isNew, isPro).filter(b => b.flag);
+    const badges = getBadgeList(isOngoing, isPro).filter(b => b.flag);
     
     return  (
     <li>

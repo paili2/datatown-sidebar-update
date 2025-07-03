@@ -5,30 +5,22 @@ export const menuItems: NavItem[] = [
   {
     icon: <GridIcon />,
     name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+    path: "/",
+    // subItems: [{ name: "Ecommerce", path: "/", pro: false }],
   },
-  {
+  { name: "Partners",
     icon: <UserCircleIcon />,
-    name: "User Profile",
-    path: "/profile",
-  },
-
-  {
-    name: "Forms",
-    icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
-  },
-  {
-    name: "Tables",
-    icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
-  },
-  {
-    name: "Pages",
-    icon: <PageIcon />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "파트너사 리스트", path: "/partners/list" },
+      { name: "우리 회사 상세 페이지", path: "/partners/our-company" },
+    ],
+  },
+   {
+    icon: <PageIcon />,
+    name: "K-Resources",
+    subItems: [
+      { name: "K-Resources 리스트", path: "/k-resources/list" },
+      { name: "우리 회사 K-Resources", path: "/k-resources/our-offerings"},
     ],
   },
 ];

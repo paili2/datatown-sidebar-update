@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { MenuType } from "../types";
 
 type SidebarState = {
   isExpanded: boolean;
@@ -6,15 +7,15 @@ type SidebarState = {
   isHovered: boolean;
   activeItem: string | null;
   openSubmenu: {
-  type: "menu" | "others";
+  type: MenuType;
   index: number;
 } | null;
   setIsHovered: (hovered: boolean) => void;
   toggleSidebar: () => void;
   toggleMobileSidebar: () => void;
   setActiveItem: (item: string | null) => void;
-  toggleSubmenu: (index: number, type: "menu" | "others") => void;
-  setOpenSubmenu: (submenu: { type: "menu"|"others"; index: number } | null) => void;
+  toggleSubmenu: (index: number, type: MenuType) => void;
+  setOpenSubmenu: (submenu: { type: MenuType; index: number } | null) => void;
 };
 
 // 열려 있는 서브메뉴의 index/type 저장 + 각 메뉴의 실제 height를 기억 (서브 열릴 때 애니메이션 효과용)

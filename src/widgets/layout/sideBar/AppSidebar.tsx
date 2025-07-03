@@ -11,9 +11,6 @@ import { menuItems } from "./data/menuItems";
 import { othersItems } from "./data/othersItems";
 import { sidebarConfig } from "./data/sidebarConfig";
 
-
-
-
 const AppSidebar: React.FC = () => {
   const { baseClass, widthClass, sidebarSlideClass } = useSidebarClasses();
   const { isExpanded, openSubmenu, setIsHovered,toggleSubmenu,setOpenSubmenu } = useSidebarStore();
@@ -24,8 +21,6 @@ const AppSidebar: React.FC = () => {
   const pathname = usePathname(); 
   const isActive = useCallback((path: string) => path === pathname, [pathname]);
 
-
-  // 진입 시 자동으로 서브메뉴 열기
   useEffect(() => {
     let submenuMatched = false;
     ["main", "others"].forEach((menuType) => {
@@ -34,7 +29,7 @@ const AppSidebar: React.FC = () => {
 
        if (nav.subItems?.some(sub => isActive(sub.path))) {
         setOpenSubmenu({
-          type: menuType as "menu" | "others",
+          type: menuType as "menu" | "Managements" | "Projects" | "General",
           index,
         });
         submenuMatched = true;
@@ -45,7 +40,6 @@ const AppSidebar: React.FC = () => {
   }, [pathname,isActive]);
 
 
-  // 애니메이션용 높이 측정
   useEffect(() => {
   if (!openSubmenu) return;
 
