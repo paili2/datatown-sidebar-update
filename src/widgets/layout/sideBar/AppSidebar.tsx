@@ -29,7 +29,7 @@ const AppSidebar: React.FC = () => {
 
        if (nav.subItems?.some(sub => isActive(sub.path))) {
         setOpenSubmenu({
-          type: menuType as "menu" | "Managements" | "Projects" | "General",
+          type: menuType as "menu" | "Managements" | "Operations" | "General",
           index,
         });
         submenuMatched = true;

@@ -33,7 +33,7 @@ export interface MenuDropdownItemProps {
 
 export type SectionProps = {title:string}
 
-export type MenuType = "menu" | "Managements" | "Projects" | "General";
+export type MenuType = "menu" | "Managements" | "Operations" | "General";
 
 
 export type SidebarMenuListProps = SidebarMenuBaseProps
