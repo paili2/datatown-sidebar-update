@@ -14,7 +14,7 @@ export const managementItems: NavItem[] = [
     icon: <UserCircleIcon />,
     name: "Internal Admins",
     subItems: [
-      { name: "어드민 관리", path: "/managements/admins/users" },
+      { name: "관리자 관리", path: "/managements/admins/users" },
       { name: "파트너사 관리", path: "/managements/admins/partners" },
     ],
   },

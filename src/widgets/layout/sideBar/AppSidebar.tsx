@@ -67,7 +67,7 @@ const AppSidebar: React.FC = () => {
             {sidebarConfig.map((config, i)=> ( <Section key={i} navItems={config.items} menuType={config.type} title={config.type} subMenuRefs={subMenuRefs}  subMenuHeight={subMenuHeight} isActive={isActive} handleSubmenuToggle={toggleSubmenu}  ></Section>))}
           </div>
         </nav>
-     <SidebarWidgetWrapper/>
+     {/* <SidebarWidgetWrapper/> */}
       </div>
     </aside>
   );

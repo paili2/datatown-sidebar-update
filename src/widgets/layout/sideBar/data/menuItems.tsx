@@ -11,8 +11,8 @@ export const menuItems: NavItem[] = [
   { name: "Partners",
     icon: <UserCircleIcon />,
     subItems: [
-      { name: "파트너사 리스트", path: "/partners/list" },
-      { name: "우리 회사 상세 페이지", path: "/partners/our-company" },
+      { name: "파트너사 리스트", path: "/list" },
+      { name: "우리 회사 상세 페이지", path: "/our-company" },
     ],
   },
    {
